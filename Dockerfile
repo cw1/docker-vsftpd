@@ -16,4 +16,5 @@ RUN set -xe \
 RUN mkdir -p /ftp /etc/vsftpd/user_conf
 COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 COPY vsftpd /etc/pam.d/vsftpd
+EXPOSE 20 21
 CMD ["vsftpd", "/etc/vsftpd/vsftpd.conf"]
