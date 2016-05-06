@@ -10,7 +10,7 @@ RUN set -xe \
       && rm -rf pam_pwdfile \
     && apk del build-base curl linux-pam-dev tar \
     && passwd -l root \
-    && useradd --home /home/vsftpd --gid nogroup -m --shell /bin/false vsftpd \
+    && adduser -D vsftpd \
     && rm -rf /var/cache/apk/*
 
 RUN mkdir -p /ftp /etc/vsftpd/user_conf
