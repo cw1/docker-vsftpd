@@ -17,5 +17,5 @@ RUN mkdir -p /ftp /etc/vsftpd/user_conf
 RUN chmod 777 /ftp
 COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 COPY vsftpd /etc/pam.d/vsftpd
-EXPOSE 20 21
+EXPOSE 20 21 10090-10100
 CMD ["vsftpd", "/etc/vsftpd/vsftpd.conf"]
