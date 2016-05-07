@@ -3,7 +3,7 @@ Simple docker container for serving some directories over FTP.
 
 ## Installation:
 ```
-docker run --name "vsftpd" -p 20-21:20-21 -p 10090-10100:10090-10100 -v ftpd.passwd:/etc/vsftpd/ftpd.passwd -v user_data:/ftp -d cw1900/docker-vsftpd
+docker run --name "vsftpd" --restart always -p 20-21:20-21 -p 10090-10100:10090-10100 -v ftpd.passwd:/etc/vsftpd/ftpd.passwd -v user_data:/ftp -d cw1900/docker-vsftpd
 ```
 
 ## Usage:
